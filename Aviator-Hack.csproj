@@ -6,7 +6,7 @@
     <RootNamespace>Aviator_Hack</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
-    <EnableWindowsTargeting>false</EnableWindowsTargeting>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>aviator.ico</ApplicationIcon>
   </PropertyGroup>
