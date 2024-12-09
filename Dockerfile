@@ -14,4 +14,4 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app .
-ENTRYPOINT ["dotnet", "aviator-predictorr.dll"]
+ENTRYPOINT ["dotnet", "Aviator-Hack.dll"]
