@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: my-dotnet-app
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/<YourApp>.dll
+    plan: free  # Or standard
+    region: oregon  # Replace with your preferred region
