@@ -1,17 +1,18 @@
-# Use the official ASP.NET Core runtime as a base image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
-WORKDIR /app
-EXPOSE 80
-
-# Use the official .NET SDK image for building the application
+# Use a .NET SDK image for building
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY . .
-RUN dotnet restore
-RUN dotnet publish -c Release -o /app
-
-# Final stage: copy the built app to the runtime image
-FROM base AS final
 WORKDIR /app
-COPY --from=build /app .
+
+# Copy everything and restore dependencies
+COPY . ./
+RUN dotnet restore
+
+# Build the application
+RUN dotnet publish -c Release -o out
+
+# Use a smaller runtime image for deployment
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
+
+# Set the entry point for the application
 ENTRYPOINT ["dotnet", "Aviator-Hack.dll"]
