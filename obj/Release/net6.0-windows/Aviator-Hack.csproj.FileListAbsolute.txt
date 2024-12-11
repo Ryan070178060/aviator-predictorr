@@ -22,9 +22,10 @@ C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-m
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.AssemblyInfoInputs.cache
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.AssemblyInfo.cs
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.csproj.CoreCompileInputs.cache
-C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.csproj.CopyComplete
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.dll
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\refint\Aviator-Hack.dll
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.pdb
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.genruntimeconfig.cache
 C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\ref\Aviator-Hack.dll
+C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-Hack.sourcelink.json
+C:\Users\thimkpad\Downloads\Aviator-Predictor-FULL-main\Aviator-Predictor-FULL-main\Aviator Predictor\obj\Release\net6.0-windows\Aviator-.EDCB2AC1.Up2Date

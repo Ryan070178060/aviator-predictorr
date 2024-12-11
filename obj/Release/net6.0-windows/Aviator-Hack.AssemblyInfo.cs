@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aviator-Hack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b75b492ce153eece09c2f5c7a466b908306193b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aviator-Hack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aviator-Hack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
