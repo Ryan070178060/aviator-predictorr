@@ -1,5 +1,5 @@
 # Use the official .NET SDK image from Microsoft
-FROM mcr.microsoft.com/dotnet/aspnet:latest AS base
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
 # Set the working directory inside the container
 WORKDIR /app
