@@ -1,33 +1,27 @@
-# Base image with .NET runtime
-# syntax = docker/dockerfile:1.2
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# Use the official .NET SDK image from Microsoft
+FROM mcr.microsoft.com/dotnet/aspnet:latest AS base
+
+# Set the working directory inside the container
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+# Copy the .csproj and restore any dependencies (via dotnet restore)
+COPY *.csproj ./
+RUN dotnet restore
 
-#add secrets file
-COPY ["secrets.json", "IdentityServer/secrets.json"]
-RUN --mount=type=secret,id=_env,dst=./secrets.json cat IdentityServer/secrets.json
+# Copy the entire source code
+COPY . ./
 
-# Install Node.js
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
-    && apt-get install -y \
-        nodejs \
-    && rm -rf /var/lib/apt/lists/*
+# Publish the app to the /out folder
+RUN dotnet publish -c Release -o /out
 
-WORKDIR /src
-COPY ["IdentityServer.csproj", "IdentityServer/"]
-RUN dotnet restore "IdentityServer/IdentityServer.csproj"
-WORKDIR "/src/IdentityServer"
-COPY . .
-RUN dotnet build "IdentityServer.csproj" -c Release -o /app/build
+# Use the official .NET runtime image for running the app
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 
-FROM build AS publish
-RUN dotnet publish "IdentityServer.csproj" -c Release -o /app/publish
-
-FROM base AS final
+# Set the working directory for the application in the runtime container
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+# Copy the published app from the build container
+COPY --from=build /out .
+
+# Set the entry point for the container
 ENTRYPOINT ["dotnet", "Aviator-Hack.dll"]
